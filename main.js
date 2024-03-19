@@ -24,7 +24,7 @@ function adicionaLinha () {
     const inputNotaAtividade = document.getElementById ('nota-atividade');
 
     if (atividades.includes(inputNomeAtividade.value)) {
-        alert (`A atividadde ${inputNomeAtividade.value} ja foi inserida`)
+        alert (`A atividade ${inputNomeAtividade.value} ja foi inserida`)
     }else {
         
     }
@@ -52,7 +52,7 @@ function atualizaTabela () {
 function atualizaMediaFinal () {
     const mediaFinal = calculaMediaFinal ();
 
-    document.getElementById ('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById ('media-final-valor').innerHTML = mediaFinal.toFixed (2);
     document.getElementById ('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 }
 
